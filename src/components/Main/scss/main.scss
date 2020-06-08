@@ -1,0 +1,135 @@
+@import 'core.scss';
+
+#container{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 100%;
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#create-game{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width:300px;
+    height: 300px;
+    border-radius: 53px;
+    background: #ffffff;
+    box-shadow: inset 30px 30px 60px #d9d9d9, 
+                inset -30px -30px 60px #ffffff;
+
+    input {
+        width: 200px;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        padding: 3px 0;
+        text-align: center;
+        font-size: 16px;
+        background-color: rgba(0,0,0,0);
+    }
+
+    span::after {
+        content: "";
+        bottom:0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s;
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        background-color: blue;
+    }
+
+    input:focus + span::after{
+        width: 100%;
+    }
+
+    form {
+        position: relative;
+        display: inherit;
+        flex-direction: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        width: 100%;
+        height: 100%;
+    }
+
+    form > div {
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+    }
+
+    form > button {
+        width: 80px;
+        height: 30px;
+        border: lightgray solid 1px;
+        border-radius: 53px;
+        background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        box-shadow:  3px 3px 6px #d9d9d9, 
+                    -3px -3px 6px #ffffff;
+        outline: none;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+#game-list {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    border-radius: 0px;
+    background: #ffffff;
+    box-shadow: inset 20px 20px 60px #d9d9d9, 
+                inset -20px -20px 60px #ffffff;
+    overflow-y: auto;
+    
+    form {
+        position: relative;
+        width: 100%;
+    }
+}
+
+.game-item {
+    position: relative;
+    display: grid;
+    width: 90%;
+    margin: 10px 5%;
+    grid-template-columns: 50% 25% 25%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+
+    div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    button {
+        height: 28px;
+        width: 40px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+        transition: 0.4s;
+        box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+    }
+}
